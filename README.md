@@ -92,7 +92,34 @@ Step 7 (Optional): You can add a reference line as a baseline to decide which ge
 
 Step 8: Rename your wokrsheet to Gender
 
-
 Conclusion: 
 
-Since the 25% of all females (above 20% mark) left the bank whereas only 16% of all males(below 20% mark) left the bank, on average female customers are more likely to churn compared to male customers.
+Since 25% of all females (above 20% mark) left the bank whereas only 16% of all males(below 20% mark) left the bank, on average female customers are more likely to churn compared to male customers.
+
+To find out whether which country you live in affects if you're likely to Exit the bank or not:
+
+Step 9: Replicate the Gender worksheet by Right-clicking Gender tab and clicking Duplicate.
+
+Step 10: Replace Gender in Columns with Geography by dragging Geogrpahy from Dimensions to Columns
+
+Step 11: Rename your sheet to Country
+
+Conclusion:
+
+German customers have a higher churn rate compared to France and Spain
+
+To find out whether or not having a credit card affect if a customer will leave the bank:
+
+Step 12: Replicate the Country worksheet by Right-clicking Country tab and clicking Duplicate.
+
+Step 13: Drag HasCrCard from Measures to Dimensions as it is a categorical variable. 
+
+Step 14: Replace Geography in Columns with HasCrCard by dragging HasCrCard from Dimensions to Columns.
+
+Step 15: To make your results visually clear replace 0 and 1 values for HasCrCard with their aliases. Click HasCrCard dropdown in Dimensions and click Aliases. Give 0 a value of No and 1 a value of Yes. Then click OK.
+
+Step 16: Rename your sheet to HasCrCard.
+
+Conclusion:
+
+Having a credit card is not an important factor in determining if a customer will churn.

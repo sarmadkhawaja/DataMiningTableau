@@ -37,6 +37,8 @@ Step 6: Drag Total Sales from Measures to Labels in Marks panel to show total sa
 
 Step 7: Right Click on the wokrsheet and click Format. On the left Format pane click the Fields dropdown and select SUM(Total Sales).
 
-a) On the Pane tab, Click the Numbers dropdown and Select Currency (Custom). Change the Display Units to Thousands.
+  a) On the Pane tab, Click the Numbers dropdown and Select Currency (Custom). Change the Display Units to Thousands.
 
-b) Repeat a) for Axis tab. Step 8: Rename your sheet to Annual Employee Bonus or whatever name you think is suitable. Save your final chart.
+  b) Repeat a) for Axis tab.
+
+Step 8: Rename your sheet to Annual Employee Bonus or whatever name you think is suitable. Save your final chart.

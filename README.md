@@ -53,7 +53,7 @@ Churn Modelling
 
 Description:
 
-The dataset represents information for a sample of 1000 customers of a bank. Each row in the dataset has info for each customer and the last column 'Exited' has a value 0 (customer did not exit the bank) or 1 (customer exited the bank). The dataset contains the following columns:
+The dataset represents information for a sample of 10000 customers of a bank. Each row in the dataset has info for each customer and the last column 'Exited' has a value 0 (customer did not exit the bank) or 1 (customer exited the bank). The dataset contains the following columns:
 
 CusotmerId - The ID of each customer assigned by the bank
 Surname - Last name of customer

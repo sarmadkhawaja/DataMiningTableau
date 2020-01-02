@@ -61,3 +61,18 @@ Step 16: Rename your sheet to HasCrCard.
 Conclusion:
 
 Having a credit card is not an important factor in determining if a customer will churn.
+
+To determine if aging can affect your decision to stay with bank:
+
+Step 17: First, we will turn this into a categorical variable by creating age bins each spanning 10 years e.g. 20-29, 30-39, 40-49 etc. In Measures, click Age dropdown>Create>Bins. Use 10 as the size of bins. This creates an 'Age (bin)' attribute in Dimensions.
+
+Step 18: Replicate the HasCrCard worksheet by Right-clicking HasCrCard tab and clicking Duplicate.
+
+Step 19: Replace HasCrCard in Columns with Age (bins) by dragging Age (bins) from Dimensions to Columns.
+
+Conclusion: Customers in their 40s, 50s and 60s are more likely to exit the bank while younger and older customers have better chances of staying.
+
+Note: The last age group 90-99 does not seem to have any customers leaving the bank. Anomalies like these often occur due to a small sub-sample. In order to demonstrate this, we can drag Number of Records from Measures to Label to get the actual number of customers in each bin. Indeed, the number of customers in the age group 90-99 are too few to give us a good result. The age group only has 2 customers and both customers happen to stay.
+
+
+

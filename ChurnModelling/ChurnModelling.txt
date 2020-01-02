@@ -4,7 +4,17 @@ Description:
 
 The dataset represents information for a sample of 10000 customers of a bank. Each row in the dataset has info for each customer and the last column 'Exited' has a value 0 (customer did not exit the bank) or 1 (customer exited the bank). The dataset contains the following columns:
 
-CusotmerId - The ID of each customer assigned by the bank Surname - Last name of customer CreditScore - The customer's credit score Geography - The location of the the customer Age - Age of customer Tenure - Number of years for which the customer had an account with the bank before the data was gathered Balance - Balance of each customer by the time data was gathered NumOfProducts - Number of products the customer has/had with the bank HasCrCard - 1 means the customer has/had credit card with the bank at the time of gathering data; 0 means they did not have credit card IsActiveMember - 1 means the customer has (0 means has not) used bank's services/products in the 6 months prior to gathering the data EstimatedSalary - The salary of the customer estimated by the bank at the time of gathering data Exited: 0 means the customer did not exit the bank; 1 means the customer did exit the bank
+CusotmerId - The ID of each customer assigned by the bank
+Surname - Last name of customer
+CreditScore - The customer's credit score
+Geography - The location of the the customer
+Age - Age of customer
+Tenure - Number of years for which the customer had an account with the bank before the data was gathered 
+Balance - Balance of each customer by the time data was gathered
+NumOfProducts - Number of products the customer has/had with the bank
+HasCrCard - 1 means the customer has/had credit card with the bank at the time of gathering data; 0 means they did not have credit card
+IsActiveMember - 1 means the customer has (0 means has not) used bank's services/products in the 6 months prior to gathering the data
+EstimatedSalary - The salary of the customer estimated by the bank at the time of gathering data Exited: 0 means the customer did not exit the bank; 1 means the customer did exit the bank
 
 Objective:
 
@@ -22,7 +32,7 @@ Step 3: Drag Gender to Columns; Drag Number of Records Rows; Drag Exited to Colo
 
 Step 4: To label the exact numbers of customers that left the bank, drag Number of Records to Label under Marks.
 
-Step 5: As number of males and females is not equal, getting the percentages instead of absolute values may help compare the effect of gender better; click dropdown for Number of Records under Marks>Add Table Calculation. Choose Percent of Total as Calculation Type, under Compute Using select Table (down). To make the percentages simpler, Click Number of Records dropdown and click Format. On the left panel under Default, click Numbers dropdown and select Perecentage and choose 0 decimal places.
+Step 5: As number of males and females is not equal, getting the percentages instead of just absolute values may help compare the effect of gender better; drag Number of Records to Label once again then click dropdown for Number of Records under Marks>Add Table Calculation. Choose Percent of Total as Calculation Type, under Compute Using select Table (down). To make the percentages simpler, Click Number of Records dropdown and click Format. On the left panel under Default, click Numbers dropdown and select Perecentage and choose 0 decimal places.
 
 Step 6: To make the axis consistent with the chart, Press ctrl and drag Number of Records from Marks to Rows. This will replace the format for Number of Records in Rows to the one in Marks.
 
@@ -75,4 +85,6 @@ Conclusion: Customers in their 40s, 50s and 60s are more likely to exit the bank
 Note: The last age group 90-99 does not seem to have any customers leaving the bank. Anomalies like these often occur due to a small sub-sample. In order to demonstrate this, we can drag Number of Records from Measures to Label to get the actual number of customers in each bin. Indeed, the number of customers in the age group 90-99 are too few to give us a good result. The age group only has 2 customers and both customers happen to stay.
 
 
+We have followed the above steps in order to visualize the relationship between various attribues (Gender, Geography, HasCrCard, Age) and outcomes (Exited/Stayed). While the charts do a good job in showing these relationships, we still need a method to be confident that our results are indeed accurate. In other words, we need a method to determine if our sample is representative of the whole population or if our results are just by chance. This is done by performing the Chi-squared test which is a method to find out if our results are statistically signifcant and therefore be applied to the whole population.
 
+The attached spreadhseet 'Chi-Squared Test.xlsx' has 2 worksheets HasCrCard and Country. In the sheet HasCrCard, the cells in the range A6:D8 are the observed values for our sample e.g. value in B6 indicates that 2332 out of 2945 (D6) customers who didn't have credit card decided to stay with the bank. The remaining 613 (C6) exited. The range B12:C13 has values for the expected outcome based on the sample. In the range A16:B18 we have the results of the Chi-Squared test and the conclusion. Our p-value is 0.48 which is greater than the cut-off significance level of 5% leading to the conclusion that having a credit card does not impact a customer's decision to stay with the bank which is in line with our conclusion above based on Tableau result. This spreadsheet can be used as a template since the formulas are included. All you have to do is populate the cells B6:C7 with the observed values. Note this template can only be used for variables whose values are binary eg. Gender is either Male or Female. If your variable has 3 categories, use the spreadsheet Country which currently has observed values for each of France, Germany and Spain. The p-vlaue indicates that our results are not random and that being from a specific country can affct your decision to stay with the bank.
